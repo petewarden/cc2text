@@ -1,0 +1,14 @@
+cc2text
+
+This project converts the web page archives stored in Common Crawl's public data set
+into text equivalents of those same pages.
+
+To test it locally, use this set of commands:
+./cc2text_map.rb < example_input.txt | ./cc2text_reduce.rb | gzip -c > example_output.arc.gz
+
+To run it on Amazon's Elastic MapReduce service, you can follow very similar steps to these:
+http://petewarden.typepad.com/searchbrowser/2012/03/twelve-steps-to-running-your-ruby-code-across-five-billion-web-pages.html
+You'll need to add these to the Extra Args box to get gzipped output files:
+-jobconf mapred.output.compress=true -jobconf mapred.output.compression.codec=org.apache.hadoop.io.compress.GzipCode
+
+Based on original code by Ben Nagy, this example by Pete Warden, pete@petewarden.com

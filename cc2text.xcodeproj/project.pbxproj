@@ -1,0 +1,81 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXFileReference section */
+		59E32374151FA51A008D2635 /* cc2text_map.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = cc2text_map.rb; sourceTree = "<group>"; };
+		59E32375151FA51A008D2635 /* cc2text_reduce.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = cc2text_reduce.rb; sourceTree = "<group>"; };
+		59E32376151FA51A008D2635 /* example_input.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = example_input.txt; sourceTree = "<group>"; };
+		59E32377151FA51A008D2635 /* README */ = {isa = PBXFileReference; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		59E32378151FA51A008D2635 /* setup.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = setup.sh; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		59E32368151FA500008D2635 = {
+			isa = PBXGroup;
+			children = (
+				59E32374151FA51A008D2635 /* cc2text_map.rb */,
+				59E32375151FA51A008D2635 /* cc2text_reduce.rb */,
+				59E32376151FA51A008D2635 /* example_input.txt */,
+				59E32377151FA51A008D2635 /* README */,
+				59E32378151FA51A008D2635 /* setup.sh */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXProject section */
+		59E3236A151FA500008D2635 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = Apple;
+			};
+			buildConfigurationList = 59E3236D151FA500008D2635 /* Build configuration list for PBXProject "cc2text" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 59E32368151FA500008D2635;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		59E3236F151FA500008D2635 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		59E32370151FA500008D2635 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		59E3236D151FA500008D2635 /* Build configuration list for PBXProject "cc2text" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59E3236F151FA500008D2635 /* Debug */,
+				59E32370151FA500008D2635 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 59E3236A151FA500008D2635 /* Project object */;
+}

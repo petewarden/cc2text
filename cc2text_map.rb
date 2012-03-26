@@ -69,17 +69,17 @@ end
 # Converts an HTML string into text using the Hpricot library
 def html2text(html)
 
-  web_doc = Hpricot(html)
-  web_doc.search("//comment()").remove
-  web_doc.search("script").remove
-  web_doc.search("style").remove
-  web_doc.search("noscript").remove
-  web_doc.search("object").remove
-  web_doc.search("embed").remove
-  web_doc.search("head").remove
-
   result = ''
   begin
+    web_doc = Hpricot(html)
+    web_doc.search("//comment()").remove
+    web_doc.search("script").remove
+    web_doc.search("style").remove
+    web_doc.search("noscript").remove
+    web_doc.search("object").remove
+    web_doc.search("embed").remove
+    web_doc.search("head").remove
+
     web_doc.traverse_text do |e| 
 
       begin
@@ -90,8 +90,9 @@ def html2text(html)
         # ignore errors
       end
     end
-  rescue
+  rescue Exception => e
     # ignore errors
+    warn "html2text() - Exception '#{e.message}' trying to parse '#{html}'"
   end
 
   if result == ''
@@ -135,6 +136,12 @@ def process_document(url_record_headers, network_doc)
   
   # Get the headers and content from the raw document string
   headers, html = doc2components(network_doc)  
+  if !html
+    warn "html=nil for '#{source_url}'"
+    warn "url_records=#{JSON.pretty_generate(url_records)}"
+    warn "url_record_headers=#{JSON.pretty_generate(url_record_headers)}"
+    return
+  end
   # Convert the HTML into rendered text
   text = html2text(html)
   # Mark this document as having been converted
